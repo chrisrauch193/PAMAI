@@ -134,3 +134,9 @@ Implemented it, but for now I can't use the attention because the MLP takes too 
 docker build . --network=host -t pytorch-latest-pamai
 docker run -it --rm --name pytorch-container --network=host pytorch-latest-pamai bash
 ```
+
+## PyPI
+```bash
+python3.8 setup.py sdist bdist_wheel
+twine upload dist/*
+```
